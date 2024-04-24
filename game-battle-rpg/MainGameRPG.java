@@ -1,5 +1,7 @@
 public class MainGameRPG {
-
+//Winaya Siti Hadz Zahra	235150601111020
+//Anggy Sasmita Ningrum	235150601111021
+    
     public static void main(String[] args) {
 
         Weapon wp = new Weapon(25);
