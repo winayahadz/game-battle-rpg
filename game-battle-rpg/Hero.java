@@ -16,5 +16,13 @@ public class Hero extends Character {
     public void setWeapon(Weapon wpn) {
 
     }
+public void attack(Character target) {
+        int damage = calculateDamage();
+        target.setHp(target.getHp() - damage);
+    }
 
+    private int calculateDamage() {
+        int baseDamage = 10;
+        return baseDamage;
+    }
 }
