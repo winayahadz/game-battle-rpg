@@ -2,8 +2,10 @@ public class Hero extends Character {
 
     private int level;
     private Weapon wpn;
+    private String race;
+    private String name;
 
-    public Hero(String name, int level, int maxHP, int maxMP, String race, Weapon weapon) {
+    public Hero(String name, int level, int maxHP, int maxMP, String race, Weapon weapon, int armor) {
         super(maxHP, maxMP, 10, race);
         this.level = level;
     }
@@ -16,7 +18,16 @@ public class Hero extends Character {
     public void setWeapon(Weapon wpn) {
 
     }
-public void attack(Character target) {
+
+    public String getRace() {
+        return race;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void attack(Character target) {
         int damage = calculateDamage();
         target.setHp(target.getHp() - damage);
     }
@@ -25,4 +36,5 @@ public void attack(Character target) {
         int baseDamage = 10;
         return baseDamage;
     }
+
 }
