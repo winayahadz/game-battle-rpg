@@ -1,18 +1,23 @@
 public class Foe extends Character {
 
     private String race;
-    private String name;
+    private Weapon wpn;
 
-    public Foe(int hp, int mp, int armor, String race) {
-        super(hp, mp, armor, race);
+    public Foe(int level, int maxHP, int maxMP, String race, Weapon weapon) {
+        super(level, maxHP, maxMP ,race);
+    }
+
+    public Weapon getWeapon() {
+        return wpn;
+
+    }
+
+    public void setWeapon(Weapon wpn) {
+
     }
 
     public String getRace() {
         return race;
-    }
-
-    public String getName() {
-        return name;
     }
 
     public void attack(Character target) {
